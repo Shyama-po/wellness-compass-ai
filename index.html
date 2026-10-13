@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wellness Compass AI</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#">✦ <span data-i="brand">Wellness Compass AI</span></a>
+  <label class="language"><span data-i="language">Language</span>
+    <select id="languageSelect" aria-label="Choose language">
+      <option value="en">English</option><option value="hi">हिन्दी</option>
+      <option value="bn">বাংলা</option><option value="or">ଓଡ଼ିଆ</option>
+      <option value="te">తెలుగు</option><option value="ta">தமிழ்</option>
+      <option value="ml">മലയാളം</option><option value="kn">ಕನ್ನಡ</option>
+      <option value="mr">मराठी</option>
+    </select>
+  </label>
+</header>
+<main class="container">
+  <section class="hero">
+    <div><p class="eyebrow" data-i="eyebrow">A gentle check-in for yourself</p>
+      <h1 data-i="headline">Understand how you're doing.</h1>
+      <p class="muted" data-i="intro">Reflect on your mental, physical and social wellbeing. Get a simple summary and practical next steps.</p>
+      <button class="btn primary" id="startBtn" data-i="start">Start check-in →</button>
+      <p class="muted tiny" data-i="privacy">🔒 Answers stay in this browser and are not uploaded.</p>
+    </div>
+    <aside class="hero-card"><span class="pill" data-i="guide">A guide, not a diagnosis</span>
+      <h2 data-i="heroCardTitle">Your wellbeing matters.</h2>
+      <p data-i="heroCard">This demo cannot diagnose or reliably predict a health condition. It helps you reflect on your recent experiences.</p>
+    </aside>
+  </section>
+  <div class="notice"><strong data-i="noticeTitle">Please read:</strong> <span data-i="notice">This is an educational demo, not a validated medical screening tool. It cannot determine whether someone is safe from suicide risk. If you might act on thoughts of suicide or self-harm, contact a trusted person and live support now.</span></div>
+  <section id="app" class="layout hidden">
+    <nav class="sidebar">
+      <p class="eyebrow" data-i="checkin">YOUR CHECK-IN</p>
+      <button class="nav active" data-step="0">01 · <span data-i="mental">Mental wellbeing</span></button>
+      <button class="nav" data-step="1">02 · <span data-i="physical">Physical wellbeing</span></button>
+      <button class="nav" data-step="2">03 · <span data-i="social">Social wellbeing</span></button>
+      <button class="nav" data-step="3">04 · <span data-i="habits">Daily habits</span></button>
+      <p class="muted tiny" data-i="sidebarNote">Take your time. There are no right or wrong answers.</p>
+    </nav>
+    <section class="panel">
+      <div class="heading"><div><p class="eyebrow" id="stepCount">SECTION 1 / 4</p><h2 id="stepTitle">Mental wellbeing</h2><p class="muted" id="stepDesc">Think about the last two weeks.</p></div><b id="percent">25%</b></div>
+      <div class="progress"><span id="progress"></span></div>
+      <form id="questionForm"><div id="questions"></div>
+        <div id="safety" class="safety hidden" role="alert">
+          <h3 data-i="safetyTitle">Your safety comes first</h3>
+          <p data-i="safetyText">If you might act on thoughts of suicide or self-harm, move away from anything you could use to hurt yourself, stay near other people and tell a trusted person you need help now.</p>
+          <p><strong data-i="india">In India:</strong> <span data-i="safetyIndia">Call 112 if in immediate danger. Tele-MANAS mental-health support: 14416.</span></p>
+          <label class="confirm"><input type="checkbox" id="safetyConfirm"><span data-i="confirm">I have read this message and understand this is not emergency support.</span></label>
+        </div>
+        <div class="actions"><button type="button" class="btn secondary" id="backBtn" data-i="back">← Back</button><button type="button" class="btn primary" id="nextBtn" data-i="continue">Continue →</button></div>
+      </form>
+      <section id="results" class="results hidden" aria-live="polite"></section>
+    </section>
+  </section>
+  <section class="cards">
+    <article><span>♡</span><h3 data-i="mental">Mental wellbeing</h3><p data-i="mentalCard">Reflect on mood, worry, interest and concentration.</p></article>
+    <article><span>＋</span><h3 data-i="physical">Physical wellbeing</h3><p data-i="physicalCard">Reflect on sleep, energy, pain and daily activities.</p></article>
+    <article><span>◎</span><h3 data-i="social">Social wellbeing</h3><p data-i="socialCard">Reflect on connection, support and relationships.</p></article>
+  </section>
+  <footer><strong data-i="brand">Wellness Compass AI</strong><p data-i="disclaimer">Not a diagnosis or a substitute for professional care. Do not use this demo to screen, rank or make decisions about other people.</p></footer>
+</main>
+</body></html>
